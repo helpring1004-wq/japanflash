@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>일본어 가나 외우기</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>일본어 가나 외우기</h1>
+      <div class="stats">
+        <span id="score">0</span> / <span id="total">0</span>
+      </div>
+      <nav>
+        <button id="hiraganaBtn" class="active">히라가나</button>
+        <button id="katakanaBtn">카타카나</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="startScreen" class="screen">
+        <div class="card">
+          <h2>학습 모드를 선택하세요</h2>
+          <button id="startHiragana" class="btn hiragana-btn">히라가나 시작</button>
+          <button id="startKatakana" class="btn katakana-btn">카타카나 시작</button>
+        </div>
+      </section>
+
+      <section id="gameArea" class="screen hidden">
+        <div class="card">
+          <div id="charDisplay" class="char-display">あ</div>
+          <div id="choices" class="choices"></div>
+          <div id="feedback" class="feedback hidden"></div>
+          <div class="controls">
+            <button id="nextBtn" class="btn hidden">다음 문제</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="resultScreen" class="screen hidden">
+        <div class="card">
+          <h2>테스트 종료</h2>
+          <p class="result-text">정답률: <span id="resultPercent">0</span>% (<span id="resultCorrect">0</span> / <span id="resultTotal">0</span>)</p>
+          <button id="restartBtn" class="btn">다시 시작</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
