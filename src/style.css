@@ -123,6 +123,7 @@ nav button.active {
   color: #fff;
   font-weight: bold;
   transition: background 0.2s;
+  margin: 0.25rem;
 }
 .btn:hover { background: #357abd; }
 
@@ -145,3 +146,47 @@ nav button.active {
 
 .result-text { font-size: 1.2rem; margin: 1rem 0; }
 #startScreen .btn { margin: 0.5rem; padding: 1rem 2rem; font-size: 1.1rem; }
+
+/* 5음씩 공부하기 */
+.study-title {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.study-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.study-item {
+  background: #f8f9fb;
+  border: 2px solid #e2e5ec;
+  border-radius: 10px;
+  padding: 0.8rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.study-char {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.study-answer {
+  font-size: 0.95rem;
+  color: #4a90d9;
+  font-weight: bold;
+  margin-top: 0.3rem;
+}
+
+@media (max-width: 480px) {
+  .study-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
